@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Error = () => {
+const Profile = () => {
     return (
         <div>
         
@@ -8,4 +8,4 @@ const Error = () => {
     );
 };
 
-export default Error;
+export default Profile;

@@ -8,9 +8,7 @@ export const Auth = () => {
     const [loginEmail, setLoginEmail] = useState("")
     const [loginPassword, setLoginPassword] = useState("")
     
-    const [registerEmail, setRegisterEmail] = useState("")
-    const [registerPassword, setRegisterPassword] = useState("")
-    
+  
     const [user, setUser] = useState({})
     const [isSignedIn, setIsSignedIn] = useState(false)
     const [signInFailure, setSignInFailure] = useState(false)
@@ -23,17 +21,6 @@ export const Auth = () => {
         } 
     }, [isSignedIn, navigate])
 
-    useEffect( () => {
-        if (signInFailure){
-            return( '')
-        } 
-    }, [signInFailure])
-
-
-
-    onAuthStateChanged( auth, (currentUser) => { 
-        setUser(currentUser)
-    } );
     
     const signIn = async () => {
         try{
@@ -43,30 +30,11 @@ export const Auth = () => {
             setLoginEmail('');
             setLoginPassword('');
         } catch (e) {
-            if (e instanceof FirebaseAuthInvalidCredentialsException) {
-                notifyUser("Invalid password");
-            } else if (e instanceof FirebaseAuthInvalidUserException) {
-                notifyUser("Incorrect email address");
-            } else {
-                notifyUser(e.getLocalizedDescription());
-            }
+            
         }
     };
 
 
-    
-
-    const createAccount = async () => {
-        try{
-            //wait for firebase to authenticate user credentials
-            await createUserWithEmailAndPassword( auth, registerEmail, registerPassword )
-            setIsSignedIn(true)
-            setRegisterEmail('');
-            setRegisterPassword('');
-        } catch (err) {
-            console.error(err)
-        }
-    };
 
     const signInWithGoogle = async () => {
         try{
@@ -80,14 +48,6 @@ export const Auth = () => {
     
     }
 
-    const logOut = async () => {
-        try{
-            await signOut(auth)
-            setIsSignedOut(true)
-        } catch (err){
-            console.error(err)
-        }
-    }
 
     return (
         <div>
@@ -113,28 +73,6 @@ export const Auth = () => {
 
                 <br></br>
                 <button onClick={signIn}> Sign In </button>
-                
-                <br></br>
-                or
-
-                <br></br>
-                <input 
-                    placeholder="Email..."
-                    type="text"
-                    value={registerEmail}
-                    onChange={ (e) => setRegisterEmail(e.target.value) }
-                />
-                
-                <br></br>
-                <input 
-                    placeholder="Password..."
-                    value={registerPassword}
-                    type="password"
-                    onChange={ (e) => setRegisterPassword(e.target.value) }
-                />
-
-                <br></br>
-                <button onClick={createAccount}> Create Account</button>
                 
                 <br></br>
                 or
