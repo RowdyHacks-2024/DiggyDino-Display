@@ -85,8 +85,6 @@ input::placeholder {
   width: 100%; /* Set width of the footer to fill the entire screen */
   height: 2px; /* Set height of the footer */
   background-color: #6B4028; /* Set background color */
-  border: 2px solid #ccc; /* Add border */
-  border-radius: 10px; /* Add border radius for rounded corners */
   padding: 20px; /* Add padding inside the footer */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add shadow */
   position: fixed; /* Position the footer */
@@ -136,10 +134,10 @@ input::placeholder {
   color: #7B967A; /* Change color on hover */
 }
 
-.login-container {
+.container2 {
   list-style-type: none; /* Remove default list styles */
   margin: 0;
-  padding: 20px;
+  padding: 10px;
   flex-direction: column; 
   justify-content: center;
   display: flex; /* Flex layout to align items horizontally */
@@ -157,7 +155,7 @@ input::placeholder {
   display: flex; /* Flex layout to align items horizontally */
   background-color: #ECE6D8;
   border-radius: 20px;
-  border: 3px solid #6B4028;
+  
   margin: 20px 10px;
 }
 
