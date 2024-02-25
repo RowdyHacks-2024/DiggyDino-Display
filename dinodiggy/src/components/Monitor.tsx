@@ -4,7 +4,18 @@ import { auth } from '../config/firebase'
 
 const Monitor = () => {
     
-   return
+    const [user, setUser] = useState<User | null>(null);
+
+    onAuthStateChanged( auth, (currentUser: User | null) => { 
+        setUser(currentUser)
+        
+    } );
+
+    return (
+        <div className='monitor-container'>
+            
+        </div>
+    );
 };
 
 export default Monitor;

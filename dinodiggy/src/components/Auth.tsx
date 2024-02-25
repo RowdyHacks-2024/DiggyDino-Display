@@ -2,7 +2,7 @@ import { auth, googleAuthProvider } from "../config/firebase"
 import { onAuthStateChanged, signInWithEmailAndPassword, createUserWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth"
 import React, { useState, useEffect } from "react"
 import { useNavigate } from "react-router-dom"
-import "./styles/Auth.css"
+
 
 
 export const Auth = () => {
@@ -21,7 +21,7 @@ export const Auth = () => {
             navigate("/profile")
         } 
     }, [isSignedIn, navigate])
-    
+
     
     const signIn = async () => {
         try{
@@ -51,7 +51,7 @@ export const Auth = () => {
 
 
     return (
-        <div className="login-container">
+        <div className="container">
             <p>
                 <div className="input-container">
                     <input 

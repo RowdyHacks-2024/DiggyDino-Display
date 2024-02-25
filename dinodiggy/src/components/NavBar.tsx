@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { auth } from '../config/firebase'
 import { onAuthStateChanged } from 'firebase/auth'
 import "../index.css"
-import "./styles/NavBar.css"
+
 
 const NavBar = () => {
     const [isSignedIn, setIsSignedIn] = useState(false)
