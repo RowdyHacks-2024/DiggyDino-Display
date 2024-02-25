@@ -11,8 +11,7 @@ const Monitor = () => {
     type Device = string
     const [device, setDevice] = useState<Device | "">("");
     const currentUserUID = auth.currentUser?.uid ?? ""
-    const getAllDetectors = useQuery(GET_USER_DETECTORS, { variables: { user_id: currentUserUID}})
-
+    
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -34,15 +33,39 @@ const Monitor = () => {
 
     return (
         <div className='container'>
-            <div className='container2'>
+            <div className='resource-container'>
             <p>
-                Click a device to see your real-time data being collected!
+                Collecting Data from Detector 8...
+
             </p>
-            <button id="buttonId" onClick={ (e) => {if (e.target instanceof HTMLButtonElement) {onDeviceClick(e.target.id)} } }>
-                Device 1
-            </button>
+
+            
 
             </div>
+
+            <div className='resource-container'>
+            <div className='container2'>
+                Temperature: 75 degrees farenheit
+            </div>
+            
+            <div className='container2'>
+                Pressure: 995 hPa
+            </div>
+
+            <div className='container2'>
+                Altitude 115 ft
+            </div>
+
+            <div className='container2'>
+                Coordinates: 48.8566° N, 2.3522° E
+            </div>
+            </div>
+
+            <div className='resource-container'>
+                Current Prediction: Great place to dig!
+            </div>
+
+            
         </div>
     );
     

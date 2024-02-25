@@ -2,9 +2,14 @@ import React from 'react';
 
 const ThreadInput = () => {
     return (
-        <article className="resource-container">
-            
-        </article>
+     
+        <div className='input-container'>
+            <p></p>
+            <input/>
+            <br></br>
+            <button>Post</button>
+        </div>
+        
     );
 };
 

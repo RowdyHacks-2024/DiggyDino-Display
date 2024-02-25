@@ -5,9 +5,10 @@ const Home = () => {
         <div>
             <div className='container'>
             <div className='resource-container'>
-                <b>Welcome to our RowdyHacks 2024 Web App !</b>
+                <b>Welcome to Diggy Dino</b>
                 <p>
-                Unearth hidden treasures! Our app harnesses climate and geolocation data to uncover nearby fossils.
+                Our web app harnesses climate and geolocation data to help you determine if you are in the right climate to find fossils! 
+                We also hope to provide you with the resources to welcome you to the fossil finding community!
                 </p>
             </div>
             </div>

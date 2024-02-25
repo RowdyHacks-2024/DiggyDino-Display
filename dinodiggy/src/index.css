@@ -2,7 +2,8 @@ body {
   margin: 0;
   font-family: Quicksand, "Segoe UI",Roboto,"Helvetica Neue",Ubuntu,sans-serif;
   background-color: #7B967A;
-  justify-content: centetr;
+  justify-content: center;
+  align-items: center;
 }
 
 button {
@@ -224,17 +225,78 @@ input::placeholder {
 }
 
 svg {
-  fill: rgb(250, 250, 250);
+  fill: #340B01;
+
+}
+
+.community-nav {
+  background-color: #340B01;
+  width: fit-content;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 20px;
+}
+
+.community-nav button {
+  margin: 1vh
+}
+.community-nav button:current{
+  background-color: #340B01;
+}
+
+.icons{
+  background-color: #ECE6D8;
+  display: flex;
+  justify-content: space-evenly;
+  border-radius: 20px;
+  margin: 10px;
+  padding: 10px;
+}
+
+.feed-card {
+  background-color: #BED4C2;
+  border-bottom: #BED4C2;
+  border-radius: 20px;
+  padding: 10px 0;
+  width: 70vh;
+  
+  max-height: 35vh;
+  overflow: auto;
+  margin-bottom: 20px;
+}
+
+.feed-card .text-container{
+  display: flex;
+  justify-content: space-between;
   
 }
 
-.communityNav {
-  background-color: #340B01;
-  width: '100%';
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  padding: 20px;
-  border-radius: 10px;
+.input-container {
+  align-items: center;
 
+}
+
+.community-container {
+  display: flex;
+  flex-direction: column; /* Ensure items are stacked vertically */
+  align-items: center; /* Center items horizontally */
+
+
+}
+
+.container3 {
+  color: #340B01;
+  font-weight: Bold;
+  position: relative;
+  margin: 20px ; 
+  margin-bottom: 60px;
+  background-color: #BED4C2;
+  border: 3px solid #340B01;
+  padding: 10px;
+  justify-content: center; /* Horizontally center elements */
+  align-items: center;
+  border-radius: 20px;
+  background-image: url('assets/background.png');
+  height: 34vh;
+  overflow: auto;
 }
