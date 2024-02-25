@@ -52,7 +52,7 @@ export const Auth = () => {
 
     return (
         <div className="container">
-            <div className='login-container'>
+            <div className='container2'>
             <p>
                 <div className="input-container">
                     <input 
