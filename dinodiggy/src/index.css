@@ -183,3 +183,10 @@ input::placeholder {
   color: #7B967A; /* Change color on hover */
 }
   
+.resource-container b {
+  color: #6B4028; /* Link color */
+  text-decoration: none; /* Remove default underline */
+  font-weight: bold;
+  font-size: 1 rem; /* Larger font size */
+  text-align: center;
+}
