@@ -21,10 +21,27 @@ const Resources = () => {
                 </p>
             </div>
             </div>
+
+            <div className='container2'>
+            <div className='resource-container'>
+                <a href="https://ucmp.berkeley.edu/online-exhibits/" target="_blank">University of California (Berkeley) Museum of Paleontology</a>
+                <p>
+                This site includes photographs of museum fossil specimens, textual material, bibliographies, and links to informational dinsoaur websites.
+                </p>
+            </div>
+            </div>
+
+            <div className='container2'>
+            <div className='resource-container'>
+                <a href="http://www.discoveringfossils.co.uk/fossil-hunting-guide/" target="_blank">Fossil Hunting Guide</a>
+                <p>
+                Discover the wonders of fossil hunting with this easy-to-follow guide, perfect for families and enthusiasts looking to find ancient treasures in great spots.
+                </p>
+            </div>
+            </div>
+
             
-            
-           
-            
+     
         </div>
     );
 };

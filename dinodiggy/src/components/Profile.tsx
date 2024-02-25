@@ -21,7 +21,7 @@ function Profile() {
 
     useEffect( () => {
         if (isSignedOut){
-            navigate("/login")
+            navigate("/")
         } 
     }, [isSignedOut, navigate])
 

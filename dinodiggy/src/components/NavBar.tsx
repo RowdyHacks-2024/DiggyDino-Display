@@ -18,19 +18,22 @@ const NavBar = () => {
     } );
 
     return (
-        <nav>
+        <nav className="navbar">
             <p className="navbar-brand">DIGGY DINO</p>
             <div className="navbar-links">
                 <a href="/">HOME</a>
                 <a href="/resources">RESOURCES</a>
-                <a href="/monitor">MONITOR</a>
-                {isSignedIn ? (
-                <a href="/profile">PROFILE</a>
-                ) : (
-                <a href="/login">LOGIN</a>
-                )}
+
+                { isSignedIn && (
+                <>
+                    <a href="/monitor">MONITOR</a> 
+                    <a href="/community">COMMUNITY</a> 
+                    <a href="/profile">PROFILE</a>
+                </> )  || <a href="/login">LOGIN</a>}
+
+
             </div>
-    
+
         </nav>
     );
 };
