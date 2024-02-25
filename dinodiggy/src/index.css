@@ -91,8 +91,20 @@ input::placeholder {
   bottom: 0; /* Align the bottom edge of the footer to the bottom of the screen */
   left: 0; /* Align the left edge of the footer to the left of the screen */
   right: 0; /* Align the right edge of the footer to the right of the screen */
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden; /* Hide any content that extends beyond container */
 }
 
+.footer-container p{
+  margin-right: 5px; /* Adjust margin between paragraphs */
+  margin-top: 0px;
+  padding-right: 7vh;
+}
+
+.footer-container p:first-child{
+  padding-left: 5vh;
+}
 
 .navbar {
   background-color: #6B4028; /* Dark background color */
