@@ -36,3 +36,11 @@
     transform: rotate(360deg);
   }
 }
+
+
+.content-container {
+ 
+  display: flex; /* Use flexbox */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+}

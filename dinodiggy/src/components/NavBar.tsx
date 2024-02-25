@@ -2,6 +2,8 @@ import React, { useState }from 'react';
 import { Link } from 'react-router-dom'
 import { auth } from '../config/firebase'
 import { onAuthStateChanged } from 'firebase/auth'
+import "../index.css"
+import "./styles/NavBar.css"
 
 const NavBar = () => {
     const [isSignedIn, setIsSignedIn] = useState(false)
@@ -16,15 +18,21 @@ const NavBar = () => {
     } );
 
     return (
-        <div>
-             <ul>
-                <Link to="/">Home  </Link>
-                <Link to="/map">Map  </Link>
-                {isSignedIn ? (<Link to="/profile">Profile  </Link> ) 
-                    : ( <Link to="/login">Login  </Link> ) }
-
-            </ul>
-        </div>
+        <nav>
+            
+            <p className="navbar-brand">DIGGYDINO</p>
+            <div className="navbar-links">
+                <a href="/">HOME</a>
+                <a href="/resources">RESOURCES</a>
+                <a href="/monitor">MONITOR</a>
+                {isSignedIn ? (
+                <a href="/profile">PROFILE</a>
+                ) : (
+                <a href="/login">LOGIN</a>
+                )}
+            </div>
+    
+        </nav>
     );
 };
 

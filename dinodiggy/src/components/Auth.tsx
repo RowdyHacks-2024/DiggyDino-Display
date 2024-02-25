@@ -2,6 +2,7 @@ import { auth, googleAuthProvider } from "../config/firebase"
 import { onAuthStateChanged, signInWithEmailAndPassword, createUserWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth"
 import React, { useState, useEffect } from "react"
 import { useNavigate } from "react-router-dom"
+import "./styles/Auth.css"
 
 
 export const Auth = () => {
@@ -20,7 +21,7 @@ export const Auth = () => {
             navigate("/profile")
         } 
     }, [isSignedIn, navigate])
-
+    
     
     const signIn = async () => {
         try{
@@ -50,38 +51,35 @@ export const Auth = () => {
 
 
     return (
-        <div>
-            <h1>Login</h1>
+        <div className="login-container">
             <p>
-                Sign in using email/password
+                <div className="input-container">
+                    <input 
+                        placeholder="Email..."
+                        type="text"
+                        value={loginEmail}
+                        onChange={ (e) => setLoginEmail(e.target.value) }
+                    />
+                </div>
                 
-                <br></br>
-                <input 
-                    placeholder="Email..."
-                    type="text"
-                    value={loginEmail}
-                    onChange={ (e) => setLoginEmail(e.target.value) }
-                />
-                
-                <br></br>
-                <input 
-                    placeholder="Password..."
-                    type="password"
-                    value={loginPassword}
-                    onChange={ (e) => setLoginPassword(e.target.value) }
-                />
+                <div className="input-container">
+                    <input 
+                        placeholder="Password..."
+                        type="password"
+                        value={loginPassword}
+                        onChange={ (e) => setLoginPassword(e.target.value) }
+                    />
+                </div>
 
-                <br></br>
                 <button onClick={signIn}> Sign In </button>
                 
-                <br></br>
-                or
-                <br></br>
+                <p>or</p>
+                
                 <button onClick={signInWithGoogle}> Sign In With Google </button>
             </p>   
-            
-                
         </div>
+    
+
     )
 }
 
