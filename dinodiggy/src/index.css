@@ -1,9 +1,8 @@
 body {
   margin: 0;
   font-family: Quicksand, "Segoe UI",Roboto,"Helvetica Neue",Ubuntu,sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   background-color: #7B967A;
+  justify-content: center;
 }
 
 button {
@@ -41,15 +40,14 @@ button:hover {
 }
 
 input {
-  padding: 10px; /* Padding for input content */
-  border: 2px solid #ccc; /* Border color */
+  padding: 10px; /* Padding for input content */ /* Border color */
+  border: 2px solid #6B4028;
   border-radius: 20px; /* Rounded corners */
   font-size: 16px; /* Font size */
   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  outline: none; /* Remove outline */
   background-color: #ECE6D8;
   color: #340B01;
-  border-color: #340B01;
+  
 
 }
 
@@ -61,17 +59,12 @@ input:hover {
 input::placeholder {
   color: #6B4028
 }
+
 .input-container {
   padding: 10px; /* Outer padding for the input container */
 }
 
-.input-container input {
-  padding: 10px; /* Inner padding for the input field */
-  border: 2px solid #ccc;
-  border-radius: 20px;
-  font-size: 16px;
-  outline: none;
-}
+
 
 .container {
     color: #340B01;
@@ -80,10 +73,12 @@ input::placeholder {
     top: 25vh;
     margin: 20px ; 
     background-color: #BED4C2;
+    border: 3px solid #340B01;
     padding: 10px;
     justify-content: center; /* Horizontally center elements */
     align-items: center;
     border-radius: 20px;
+    background-image: url('assets/background.png');
 }
 
 .footer-container {
@@ -140,7 +135,19 @@ input::placeholder {
 .navbar-links a:hover {
   color: #7B967A; /* Change color on hover */
 }
-  
+
+.login-container {
+  list-style-type: none; /* Remove default list styles */
+  margin: 0;
+  padding: 20px;
+  flex-direction: column; 
+  justify-content: center;
+  display: flex; /* Flex layout to align items horizontally */
+  background-color: rgba(123, 150, 122, 0.9);
+  border-radius: 20px;
+  margin: 20px 10px;
+}
+
 .resource-container {
   list-style-type: none; /* Remove default list styles */
   margin: 0;
@@ -150,6 +157,7 @@ input::placeholder {
   display: flex; /* Flex layout to align items horizontally */
   background-color: #ECE6D8;
   border-radius: 20px;
+  border: 3px solid #6B4028;
   margin: 20px 10px;
 }
 

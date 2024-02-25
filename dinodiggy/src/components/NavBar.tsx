@@ -19,8 +19,7 @@ const NavBar = () => {
 
     return (
         <nav>
-            
-            <p className="navbar-brand">DIGGYDINO</p>
+            <p className="navbar-brand"> 🦕 DIGGYDINO 🦖</p>
             <div className="navbar-links">
                 <a href="/">HOME</a>
                 <a href="/resources">RESOURCES</a>

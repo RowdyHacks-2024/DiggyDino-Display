@@ -52,6 +52,7 @@ export const Auth = () => {
 
     return (
         <div className="container">
+            <div className='login-container'>
             <p>
                 <div className="input-container">
                     <input 
@@ -76,7 +77,8 @@ export const Auth = () => {
                 <p>or</p>
                 
                 <button onClick={signInWithGoogle}> Sign In With Google </button>
-            </p>   
+            </p>
+            </div>   
         </div>
     
 
