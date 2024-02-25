@@ -1,0 +1,53 @@
+{
+    "users": [{
+        "id": 1,
+        "username" : "Anonymous",
+        "handle" : "Anonymous"
+    },
+    {
+        "id": 2,
+        "username" : "Anonymous",
+        "handle" : "Anonymous"
+    },
+     {
+        "id": 2,
+        "username" : "Anonymous",
+        "handle" : "Anonymous"
+    },
+    {
+        "id": 2,
+        "username" : "Anonymous",
+        "handle" : "Anonymous"
+    }],
+
+    "threads": [
+        {
+            "id": 0,
+            "timestamp": "10/02/2023 3:30pm",
+            "thread_from": 1,
+            "thread_to": null,
+            "reply_to": null, 
+            "text": "Hey guys! I found some fossils today!",
+            "likes":[]
+        },
+        {
+            "id": 1,
+            "timestamp": "02/02/2023 10:45pm",
+            "thread_from": 3,
+            "thread_to": null,
+            "reply_to": null, 
+            "text": "I did not find any fossils today :(",
+            "likes":[]
+        },
+        {
+            "id": 0,
+            "timestamp": "10/02/2023 3:30pm",
+            "thread_from": 2,
+            "thread_to": null,
+            "reply_to": 1, 
+            "text": "Nooooo",
+            "likes":[ ]
+        }
+    ]
+}
+

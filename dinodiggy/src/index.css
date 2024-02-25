@@ -32,6 +32,7 @@ button {
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
+  width: max-content;
 }
 
 button:hover {
@@ -79,8 +80,7 @@ input::placeholder {
     align-items: center;
     border-radius: 20px;
     background-image: url('assets/background.png');
-    max-height: 100vh; /* Set maximum height to viewport height */
-    overflow-y: auto;
+   
   }
 
 .footer-container {
@@ -109,10 +109,6 @@ input::placeholder {
 .login-container {
   color: #340B01;
   font-weight: Bold;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -60%);
   margin: 20px ; 
   margin-bottom: 60px;
   background-color: #BED4C2;
@@ -193,7 +189,7 @@ input::placeholder {
   display: flex; /* Flex layout to align items horizontally */
   background-color: #ECE6D8;
   border-radius: 20px;
-  
+  align-items: center;
   margin: 20px 10px;
 }
 
@@ -225,4 +221,20 @@ input::placeholder {
   font-weight: bold;
   font-size: 1 rem; /* Larger font size */
   text-align: center;
+}
+
+svg {
+  fill: rgb(250, 250, 250);
+  
+}
+
+.communityNav {
+  background-color: #340B01;
+  width: '100%';
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 20px;
+  border-radius: 10px;
+
 }

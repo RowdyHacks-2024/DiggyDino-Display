@@ -2,13 +2,16 @@ import React, { useEffect, useState } from 'react';
 import { onAuthStateChanged, signOut, User } from 'firebase/auth'
 import { auth } from '../config/firebase'
 import { useNavigate } from 'react-router-dom';
-
+import { useQuery } from '@apollo/react-hooks';
+import { GET_USER_DETECTORS } from '../Queries/detectors';
 const Monitor = () => {
 
     const [user, setUser] = useState<User | null>(null);
     
     type Device = string
     const [device, setDevice] = useState<Device | "">("");
+    const currentUserUID = auth.currentUser?.uid ?? ""
+    const getAllDetectors = useQuery(GET_USER_DETECTORS, { variables: { user_id: currentUserUID}})
 
     const navigate = useNavigate();
 

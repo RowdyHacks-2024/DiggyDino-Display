@@ -34,16 +34,14 @@ function Profile() {
     }
 
   return(
-    <>
-        <p>
-            <h4>User logged in:</h4>
-                {user?.email}
-
-            <br></br>
-            <button onClick={logOut}> Sign Out </button>
-        </p>
+    <div className='container'>
+        <div className='resource-container'>
+        <p> User: {user?.email} </p>
+        <br></br>
+        <button onClick={logOut} > Sign Out </button>
         
-    </>
+        </div>
+    </div>
   )
 }
 

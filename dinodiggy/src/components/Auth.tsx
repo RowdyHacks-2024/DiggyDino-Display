@@ -13,6 +13,8 @@ export const Auth = () => {
     const [user, setUser] = useState({})
     const [isSignedIn, setIsSignedIn] = useState(false)
     const [signInFailure, setSignInFailure] = useState(false)
+    
+    const[error, setError] = useState("")
 
     const navigate = useNavigate();
 
@@ -30,12 +32,10 @@ export const Auth = () => {
             setIsSignedIn(true)
             setLoginEmail('');
             setLoginPassword('');
-        } catch (e) {
-            
+        } catch (error) {
+            setError((error as Error).message);
         }
     };
-
-
 
     const signInWithGoogle = async () => {
         try{
@@ -43,13 +43,13 @@ export const Auth = () => {
             await signInWithPopup( auth, googleAuthProvider )
             setIsSignedIn(true)
 
-        } catch (err) {
-            console.error(err)
+        } catch (error) {
+            setError((error as Error).message);
         }
     
     }
 
-
+    
     return (
         <div className="login-container">
             <div className='container2'>
@@ -73,10 +73,17 @@ export const Auth = () => {
                 </div>
 
                 <button onClick={signIn}> Sign In </button>
+
+                <br></br>
+                <br></br>
+                <p>For new users: </p>
+                <button > <a href="./register" style={{ textDecoration: 'none', color: '#ECE6D8' }}>Create Account</a></button>
                 
-                <p>or</p>
+                <p>______________ or ______________</p>
                 
                 <button onClick={signInWithGoogle}> Sign In With Google </button>
+                {error && <div className="error-message">{error}</div>}
+
             </p>
             </div>   
         </div>
